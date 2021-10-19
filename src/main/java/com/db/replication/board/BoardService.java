@@ -1,17 +1,15 @@
-package com.db.replication.service;
+package com.db.replication.board.service;
 
-import com.db.replication.Board;
-import com.db.replication.BoardRepository;
+import com.db.replication.board.Board;
+import com.db.replication.board.BoardRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.sql.DataSource;
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-@Transactional
 public class BoardService {
 
     private final BoardRepository boardRepository;
