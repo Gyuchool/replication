@@ -1,4 +1,4 @@
-package com.db.replication.board.service;
+package com.db.replication.board;
 
 import com.db.replication.board.Board;
 import com.db.replication.board.BoardRepository;
@@ -25,5 +25,12 @@ public class BoardService {
             board.setTitle("newTitle");
         }
         return getBoardList();
+    }
+
+    public void add(Dto dto){
+        Board board = new Board();
+        board.setTitle(dto.getTitle());
+        board.setContent(dto.getContent());
+        boardRepository.save(board);
     }
 }

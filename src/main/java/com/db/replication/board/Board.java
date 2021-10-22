@@ -1,4 +1,4 @@
-package com.db.replication;
+package com.db.replication.board;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,12 +14,16 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @AllArgsConstructor
-@NoArgsConstructor
 public class Board {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private String content;
+
+    public Board(){
+        this.title = "기본";
+        this.content = "무내용";
+    }
 
 }
